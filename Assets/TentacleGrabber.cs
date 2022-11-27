@@ -40,7 +40,7 @@ public class TentacleGrabber : MonoBehaviour
 
             Vector3 ForceDirection = transform.position - Target.transform.position;
 
-            rb.AddForce(ForceDirection * -speed, ForceMode.Force);
+            rb.AddForce(ForceDirection * -speed, ForceMode.Acceleration);
 
             if (Vector3.Distance(transform.position, mainBody.transform.position) > maxDist)
             {
