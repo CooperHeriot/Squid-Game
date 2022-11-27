@@ -11,10 +11,19 @@ public class TentacleGrabber : MonoBehaviour
     public float speed;
     private float speedHolder;
     public Vector3 screenPos, worldPosition;
+
     public GameObject Target;
     private Rigidbody rb;
+
     public GameObject mainBody;
     public float maxDist;
+
+    //grab stuff
+    public GameObject carryObj;
+    public HingeJoint GrabHinge;
+    public Rigidbody GrabbedObj;
+    public bool grabbing;
+    public bool grabbed;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +33,9 @@ public class TentacleGrabber : MonoBehaviour
         speedHolder = speed;
 
         maxDist = Vector3.Distance(transform.position, mainBody.transform.position);
+
+        //GrabHinge = GetComponent<HingeJoint>();
+        GrabHinge.connectedBody = carryObj.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -51,6 +63,23 @@ public class TentacleGrabber : MonoBehaviour
             }
         }
 
-        
+        if (Input.GetMouseButtonDown(0)){
+            grabbing = !grabbing;
+        }
+
+        if (grabbing == false)
+        {
+            grabbed = false;
+            GrabHinge.connectedBody = carryObj.GetComponent<Rigidbody>();
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (grabbing == true && grabbed == false && other.GetComponent<Rigidbody>() != null && other.transform.tag != "Squid")
+        {
+            GrabHinge.connectedBody = other.GetComponent<Rigidbody>();
+            grabbed = true;
+        }
     }
 }
