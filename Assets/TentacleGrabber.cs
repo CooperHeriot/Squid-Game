@@ -16,7 +16,9 @@ public class TentacleGrabber : MonoBehaviour
     private Rigidbody rb;
 
     public GameObject mainBody;
+    private Rigidbody mainBodRb;
     public float maxDist;
+    public float dragForce;
 
     //grab stuff
     public GameObject carryObj;
@@ -24,6 +26,7 @@ public class TentacleGrabber : MonoBehaviour
     public Rigidbody GrabbedObj;
     public bool grabbing;
     public bool grabbed;
+    public bool immovable;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,8 @@ public class TentacleGrabber : MonoBehaviour
         speedHolder = speed;
 
         maxDist = Vector3.Distance(transform.position, mainBody.transform.position);
+
+        mainBodRb = mainBody.GetComponent<Rigidbody>();
 
         //GrabHinge = GetComponent<HingeJoint>();
         GrabHinge.connectedBody = carryObj.GetComponent<Rigidbody>();
@@ -61,16 +66,26 @@ public class TentacleGrabber : MonoBehaviour
             {
                 speed = speedHolder;
             }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                grabbing = !grabbing;
+            }
         }
 
-        if (Input.GetMouseButtonDown(0)){
-            grabbing = !grabbing;
-        }
-
+       
         if (grabbing == false)
         {
             grabbed = false;
+            immovable = false;
             GrabHinge.connectedBody = carryObj.GetComponent<Rigidbody>();
+        }
+
+        if (immovable == true)
+        {
+            Vector3 BodDrag = transform.position - mainBody.transform.position;
+
+            mainBodRb.AddForce(BodDrag * dragForce, ForceMode.Acceleration);
         }
     }
 
@@ -80,6 +95,10 @@ public class TentacleGrabber : MonoBehaviour
         {
             GrabHinge.connectedBody = other.GetComponent<Rigidbody>();
             grabbed = true;
+            if (other.GetComponent<Rigidbody>().isKinematic == true)
+            {
+                immovable = true;
+            }
         }
     }
 }

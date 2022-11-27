@@ -137,11 +137,10 @@ GameObject:
   - component: {fileID: 8042356}
   - component: {fileID: 8042353}
   - component: {fileID: 8042355}
-  - component: {fileID: 8042354}
   - component: {fileID: 8042360}
   m_Layer: 0
   m_Name: Arm (17)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,22 +159,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &8042354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8042352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &8042355
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -191,7 +176,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -303,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
 --- !u!1 &22307611
 GameObject:
@@ -322,7 +308,7 @@ GameObject:
   - component: {fileID: 22307619}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,7 +470,138 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
+--- !u!1 &38381259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 38381265}
+  - component: {fileID: 38381264}
+  - component: {fileID: 38381263}
+  - component: {fileID: 38381262}
+  - component: {fileID: 38381261}
+  - component: {fileID: 38381260}
+  m_Layer: 0
+  m_Name: ImmovableTest (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &38381260
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38381259}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &38381261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38381259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 50
+  Dampner: 1
+  inWater: 0
+--- !u!65 &38381262
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38381259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &38381263
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38381259}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5fe26a4351d72764597210eb2b96bb81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &38381264
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38381259}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &38381265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38381259}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.83, y: 0, z: 15.809999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1526442230}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &77827291
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,11 +616,10 @@ GameObject:
   - component: {fileID: 77827295}
   - component: {fileID: 77827292}
   - component: {fileID: 77827294}
-  - component: {fileID: 77827293}
   - component: {fileID: 77827299}
   m_Layer: 0
   m_Name: Arm (9)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,22 +638,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &77827293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77827291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &77827294
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -553,7 +655,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.9920001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -665,7 +767,138 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
+--- !u!1 &93437120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93437126}
+  - component: {fileID: 93437125}
+  - component: {fileID: 93437124}
+  - component: {fileID: 93437123}
+  - component: {fileID: 93437122}
+  - component: {fileID: 93437121}
+  m_Layer: 0
+  m_Name: GrabTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &93437121
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93437120}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &93437122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93437120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 50
+  Dampner: 1
+  inWater: 0
+--- !u!65 &93437123
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93437120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &93437124
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93437120}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5fe26a4351d72764597210eb2b96bb81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &93437125
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93437120}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &93437126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93437120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.61, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &95024465
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +1008,7 @@ GameObject:
   - component: {fileID: 168187240}
   m_Layer: 0
   m_Name: ArmContainer
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -805,11 +1038,42 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1602152611}
+  - {fileID: 1983710253}
   - {fileID: 462478406}
   - {fileID: 1346492007}
   m_Father: {fileID: 244934523}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &197353492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 197353493}
+  m_Layer: 0
+  m_Name: StartPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &197353493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197353492}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 580480733}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204766015
 GameObject:
@@ -822,7 +1086,7 @@ GameObject:
   - component: {fileID: 204766016}
   m_Layer: 0
   m_Name: FullArm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -862,11 +1126,10 @@ GameObject:
   - component: {fileID: 218796723}
   - component: {fileID: 218796720}
   - component: {fileID: 218796722}
-  - component: {fileID: 218796721}
   - component: {fileID: 218796727}
   m_Layer: 0
   m_Name: Arm (20)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -885,22 +1148,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &218796721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218796719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &218796722
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -916,7 +1165,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -1022,13 +1271,111 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218796719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
+--- !u!1 &231292491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 231292495}
+  - component: {fileID: 231292494}
+  - component: {fileID: 231292493}
+  - component: {fileID: 231292492}
+  m_Layer: 0
+  m_Name: Collision test (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &231292492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231292491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &231292493
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231292491}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &231292494
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231292491}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &231292495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231292491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.85, y: 0, z: 6.99}
+  m_LocalScale: {x: 2.4221783, y: 1, z: 5.76385}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244934522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,7 +1387,7 @@ GameObject:
   - component: {fileID: 244934523}
   m_Layer: 0
   m_Name: SquidContainer
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1077,11 +1424,10 @@ GameObject:
   - component: {fileID: 253828680}
   - component: {fileID: 253828677}
   - component: {fileID: 253828679}
-  - component: {fileID: 253828678}
   - component: {fileID: 253828684}
   m_Layer: 0
   m_Name: Arm (15)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1100,22 +1446,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &253828678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253828676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &253828679
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -1131,7 +1463,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.9920001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -1243,7 +1575,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
+--- !u!1 &256721389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256721391}
+  - component: {fileID: 256721390}
+  m_Layer: 0
+  m_Name: Lever
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &256721390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256721389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d32618488e12241875b48c31895a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tip: {fileID: 1194279555}
+  point: {fileID: 360106540}
+  radius: 1
+  dor: {fileID: 934461660}
+  dist: 0
+--- !u!4 &256721391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256721389}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.14, y: 0, z: -3.5}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1226626092}
+  - {fileID: 360106542}
+  - {fileID: 334820909}
+  - {fileID: 1995005488}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &261552899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,11 +1644,10 @@ GameObject:
   - component: {fileID: 261552903}
   - component: {fileID: 261552900}
   - component: {fileID: 261552902}
-  - component: {fileID: 261552901}
   - component: {fileID: 261552907}
   m_Layer: 0
   m_Name: Arm (6)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1281,22 +1666,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &261552901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261552899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &261552902
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -1312,7 +1683,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.35, y: 0, z: 0.493}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -1342,7 +1713,7 @@ SphereCollider:
   m_GameObject: {fileID: 261552899}
   m_Material: {fileID: 13400000, guid: aaa976d200db4714d8b63b6b2f80d65f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1424,6 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &270583779
 GameObject:
@@ -1443,7 +1815,7 @@ GameObject:
   - component: {fileID: 270583787}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1605,6 +1977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &280273565
 GameObject:
@@ -1620,11 +1993,10 @@ GameObject:
   - component: {fileID: 280273569}
   - component: {fileID: 280273566}
   - component: {fileID: 280273568}
-  - component: {fileID: 280273567}
   - component: {fileID: 280273573}
   m_Layer: 0
   m_Name: Arm (21)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1643,22 +2015,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &280273567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280273565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &280273568
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -1674,7 +2032,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.9920001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -1780,13 +2138,60 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280273565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
+--- !u!1 &290430632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 290430634}
+  - component: {fileID: 290430633}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &290430633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290430632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab474db8893f904c8f9a7024bfc3937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: -50
+  gra: []
+--- !u!4 &290430634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290430632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.72808224, y: -3.4840012, z: -2.1087575}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292434379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,11 +2303,10 @@ GameObject:
   - component: {fileID: 303152008}
   - component: {fileID: 303152005}
   - component: {fileID: 303152007}
-  - component: {fileID: 303152006}
   - component: {fileID: 303152012}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1923,20 +2327,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &303152006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303152004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &303152007
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -1952,7 +2342,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.54}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -2058,12 +2448,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303152004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 3
   inWater: 0
 --- !u!1 &317529159
 GameObject:
@@ -2148,6 +2539,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317529159}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &334820908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 334820909}
+  - component: {fileID: 334820912}
+  - component: {fileID: 334820911}
+  - component: {fileID: 334820910}
+  m_Layer: 31
+  m_Name: Stoper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &334820909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334820908}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 2.6, y: 0, z: -1.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 256721391}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!65 &334820910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334820908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &334820911
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334820908}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8fbce3baebc52ee4e9befacb02e6234b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &334820912
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334820908}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &339667184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,7 +2650,7 @@ GameObject:
   - component: {fileID: 339667186}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2345,6 +2833,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &360106540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360106542}
+  - component: {fileID: 360106541}
+  m_Layer: 0
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!33 &360106541
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360106540}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &360106542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360106540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6553, y: 0, z: -2.0907161}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 256721391}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369360646
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,7 +2891,7 @@ GameObject:
   - component: {fileID: 369360654}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2525,6 +3053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &376654006
 GameObject:
@@ -2544,7 +3073,7 @@ GameObject:
   - component: {fileID: 376654014}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2706,6 +3235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &381247981
 GameObject:
@@ -2725,7 +3255,7 @@ GameObject:
   - component: {fileID: 381247989}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2887,6 +3417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &390818686
 GameObject:
@@ -2902,11 +3433,10 @@ GameObject:
   - component: {fileID: 390818690}
   - component: {fileID: 390818687}
   - component: {fileID: 390818689}
-  - component: {fileID: 390818688}
   - component: {fileID: 390818694}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2927,20 +3457,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &390818688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390818686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &390818689
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -2956,7 +3472,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -3068,6 +3584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &443266911
 GameObject:
@@ -3083,11 +3600,10 @@ GameObject:
   - component: {fileID: 443266915}
   - component: {fileID: 443266912}
   - component: {fileID: 443266914}
-  - component: {fileID: 443266913}
   - component: {fileID: 443266919}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3108,20 +3624,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &443266913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443266911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &443266914
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -3137,7 +3639,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.9920001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -3249,6 +3751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &443949276
 GameObject:
@@ -3264,11 +3767,10 @@ GameObject:
   - component: {fileID: 443949280}
   - component: {fileID: 443949277}
   - component: {fileID: 443949279}
-  - component: {fileID: 443949278}
   - component: {fileID: 443949284}
   m_Layer: 0
   m_Name: Arm (10)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3287,22 +3789,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &443949278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443949276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &443949279
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -3318,7 +3806,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -3430,6 +3918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &457111821
 GameObject:
@@ -3445,11 +3934,10 @@ GameObject:
   - component: {fileID: 457111825}
   - component: {fileID: 457111822}
   - component: {fileID: 457111824}
-  - component: {fileID: 457111823}
   - component: {fileID: 457111829}
   m_Layer: 0
   m_Name: Arm (14)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3468,22 +3956,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &457111823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457111821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &457111824
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -3499,7 +3973,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -3611,6 +4085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
 --- !u!1 &457881204
 GameObject:
@@ -3626,11 +4101,10 @@ GameObject:
   - component: {fileID: 457881208}
   - component: {fileID: 457881205}
   - component: {fileID: 457881207}
-  - component: {fileID: 457881206}
   - component: {fileID: 457881212}
   m_Layer: 0
   m_Name: Arm (9)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3649,22 +4123,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &457881206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457881204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &457881207
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -3680,7 +4140,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.9920001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -3792,6 +4252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &459402560
 GameObject:
@@ -3807,11 +4268,10 @@ GameObject:
   - component: {fileID: 459402564}
   - component: {fileID: 459402561}
   - component: {fileID: 459402563}
-  - component: {fileID: 459402562}
   - component: {fileID: 459402568}
   m_Layer: 0
   m_Name: Arm (18)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3830,22 +4290,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &459402562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459402560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &459402563
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -3861,7 +4307,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.35, y: 0, z: 0.493}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -3891,7 +4337,7 @@ SphereCollider:
   m_GameObject: {fileID: 459402560}
   m_Material: {fileID: 13400000, guid: aaa976d200db4714d8b63b6b2f80d65f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -3973,6 +4419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
 --- !u!1 &462478405
 GameObject:
@@ -3986,7 +4433,7 @@ GameObject:
   - component: {fileID: 462478407}
   m_Layer: 0
   m_Name: TentacleContainer
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4034,7 +4481,7 @@ GameObject:
   - component: {fileID: 473156851}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4053,6 +4500,7 @@ Transform:
   m_Children:
   - {fileID: 1733639970}
   - {fileID: 339667185}
+  - {fileID: 1602152611}
   m_Father: {fileID: 1993885859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4070,11 +4518,10 @@ GameObject:
   - component: {fileID: 520379144}
   - component: {fileID: 520379141}
   - component: {fileID: 520379143}
-  - component: {fileID: 520379142}
   - component: {fileID: 520379148}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4095,20 +4542,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &520379142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520379140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &520379143
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -4124,7 +4557,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -4236,7 +4669,138 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
+--- !u!1 &536608584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536608590}
+  - component: {fileID: 536608589}
+  - component: {fileID: 536608588}
+  - component: {fileID: 536608587}
+  - component: {fileID: 536608586}
+  - component: {fileID: 536608585}
+  m_Layer: 0
+  m_Name: ImmovableTest (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &536608585
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536608584}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &536608586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536608584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 50
+  Dampner: 1
+  inWater: 0
+--- !u!65 &536608587
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536608584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &536608588
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536608584}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5fe26a4351d72764597210eb2b96bb81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &536608589
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536608584}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &536608590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536608584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.83, y: 0, z: 13.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1526442230}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556403616
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,7 +4812,7 @@ GameObject:
   - component: {fileID: 556403617}
   m_Layer: 0
   m_Name: Tentacle
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4310,7 +4874,7 @@ GameObject:
   - component: {fileID: 565591460}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4472,6 +5036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &568193163
 GameObject:
@@ -4487,11 +5052,10 @@ GameObject:
   - component: {fileID: 568193167}
   - component: {fileID: 568193164}
   - component: {fileID: 568193166}
-  - component: {fileID: 568193165}
   - component: {fileID: 568193171}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4512,20 +5076,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &568193165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568193163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &568193166
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -4541,7 +5091,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -4653,7 +5203,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
+--- !u!1 &580480732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580480733}
+  m_Layer: 0
+  m_Name: DoorContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580480733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580480732}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.84, y: 0, z: 2.32}
+  m_LocalScale: {x: 1, y: 1, z: 4.9098}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 197353493}
+  - {fileID: 1329345759}
+  - {fileID: 934461659}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609050518
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,11 +5253,10 @@ GameObject:
   - component: {fileID: 609050522}
   - component: {fileID: 609050519}
   - component: {fileID: 609050521}
-  - component: {fileID: 609050520}
   - component: {fileID: 609050526}
   m_Layer: 0
   m_Name: Arm (7)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4691,22 +5275,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &609050520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609050518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &609050521
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -4722,7 +5292,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1.0000001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -4834,7 +5404,138 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
+--- !u!1 &612247883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 612247889}
+  - component: {fileID: 612247888}
+  - component: {fileID: 612247887}
+  - component: {fileID: 612247886}
+  - component: {fileID: 612247885}
+  - component: {fileID: 612247884}
+  m_Layer: 0
+  m_Name: ImmovableTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &612247884
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612247883}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &612247885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612247883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 50
+  Dampner: 1
+  inWater: 0
+--- !u!65 &612247886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612247883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &612247887
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612247883}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5fe26a4351d72764597210eb2b96bb81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &612247888
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612247883}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &612247889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612247883}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.26, y: 0, z: 4.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1526442230}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625199568
 GameObject:
   m_ObjectHideFlags: 0
@@ -4849,11 +5550,10 @@ GameObject:
   - component: {fileID: 625199572}
   - component: {fileID: 625199569}
   - component: {fileID: 625199571}
-  - component: {fileID: 625199570}
   - component: {fileID: 625199576}
   m_Layer: 0
   m_Name: Arm (6)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4872,22 +5572,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &625199570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625199568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &625199571
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -4903,7 +5589,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.35, y: 0, z: 0.493}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -4933,7 +5619,7 @@ SphereCollider:
   m_GameObject: {fileID: 625199568}
   m_Material: {fileID: 13400000, guid: aaa976d200db4714d8b63b6b2f80d65f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -5015,6 +5701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &648926707
 GameObject:
@@ -5034,7 +5721,7 @@ GameObject:
   - component: {fileID: 648926715}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5196,6 +5883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &651851876
 GameObject:
@@ -5215,7 +5903,7 @@ GameObject:
   - component: {fileID: 651851884}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5377,6 +6065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &666197378
 GameObject:
@@ -5396,7 +6085,7 @@ GameObject:
   - component: {fileID: 666197386}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5558,6 +6247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &670233114
 GameObject:
@@ -5573,11 +6263,10 @@ GameObject:
   - component: {fileID: 670233118}
   - component: {fileID: 670233115}
   - component: {fileID: 670233117}
-  - component: {fileID: 670233116}
   - component: {fileID: 670233122}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5598,20 +6287,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &670233116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670233114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &670233117
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -5627,7 +6302,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.9920001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -5739,6 +6414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &678180353
 GameObject:
@@ -5758,7 +6434,7 @@ GameObject:
   - component: {fileID: 678180361}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5920,6 +6596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &686085645
 GameObject:
@@ -5935,11 +6612,10 @@ GameObject:
   - component: {fileID: 686085649}
   - component: {fileID: 686085646}
   - component: {fileID: 686085648}
-  - component: {fileID: 686085647}
   - component: {fileID: 686085653}
   m_Layer: 0
   m_Name: Arm (10)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5958,22 +6634,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &686085647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686085645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &686085648
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -5989,7 +6651,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -6101,6 +6763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &692305002
 GameObject:
@@ -6120,7 +6783,7 @@ GameObject:
   - component: {fileID: 692305010}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6282,6 +6945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &692572249
 GameObject:
@@ -6301,7 +6965,7 @@ GameObject:
   - component: {fileID: 692572257}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6463,6 +7127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &695226051
 GameObject:
@@ -6482,7 +7147,7 @@ GameObject:
   - component: {fileID: 695226059}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6644,6 +7309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &696139318
 GameObject:
@@ -6663,7 +7329,7 @@ GameObject:
   - component: {fileID: 696139326}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6825,6 +7491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &723072512
 GameObject:
@@ -6840,11 +7507,10 @@ GameObject:
   - component: {fileID: 723072516}
   - component: {fileID: 723072513}
   - component: {fileID: 723072515}
-  - component: {fileID: 723072514}
   - component: {fileID: 723072520}
   m_Layer: 0
   m_Name: Arm (7)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6863,22 +7529,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &723072514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723072512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &723072515
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -6894,7 +7546,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1.0000001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -7006,6 +7658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &728638838
 GameObject:
@@ -7025,7 +7678,7 @@ GameObject:
   - component: {fileID: 728638846}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7187,6 +7840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &754275819
 GameObject:
@@ -7202,11 +7856,10 @@ GameObject:
   - component: {fileID: 754275823}
   - component: {fileID: 754275820}
   - component: {fileID: 754275822}
-  - component: {fileID: 754275821}
   - component: {fileID: 754275827}
   m_Layer: 0
   m_Name: Arm (19)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7225,22 +7878,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &754275821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754275819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &754275822
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -7256,7 +7895,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1.0000001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -7362,12 +8001,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754275819}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &793326511
 GameObject:
@@ -7387,7 +8027,7 @@ GameObject:
   - component: {fileID: 793326519}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7549,6 +8189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &808746423
 GameObject:
@@ -7568,7 +8209,7 @@ GameObject:
   - component: {fileID: 808746431}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7730,6 +8371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &813287461
 GameObject:
@@ -7745,11 +8387,10 @@ GameObject:
   - component: {fileID: 813287465}
   - component: {fileID: 813287462}
   - component: {fileID: 813287464}
-  - component: {fileID: 813287463}
   - component: {fileID: 813287469}
   m_Layer: 0
   m_Name: Arm (8)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7768,22 +8409,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &813287463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813287461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &813287464
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -7799,7 +8426,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -7911,6 +8538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &830058299
 GameObject:
@@ -8024,12 +8652,13 @@ GameObject:
   - component: {fileID: 855653038}
   - component: {fileID: 855653037}
   - component: {fileID: 855653036}
-  - component: {fileID: 855653035}
   - component: {fileID: 855653041}
   - component: {fileID: 855653042}
+  - component: {fileID: 855653043}
+  - component: {fileID: 855653044}
   m_Layer: 0
   m_Name: Grabb
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8048,23 +8677,10 @@ Transform:
   m_Children:
   - {fileID: 830058300}
   - {fileID: 1634998795}
+  - {fileID: 1842228905}
   m_Father: {fileID: 556403617}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &855653035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855653033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &855653036
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -8080,7 +8696,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -8194,12 +8810,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   on: 1
   cam: {fileID: 1433215520}
-  speed: 5
+  speed: 6
   screenPos: {x: 0, y: 0, z: 0}
   worldPosition: {x: 0, y: 0, z: 0}
   Target: {fileID: 1634998794}
   mainBody: {fileID: 1612782913}
   maxDist: 0
+  dragForce: 3
+  carryObj: {fileID: 1842228904}
+  GrabHinge: {fileID: 855653043}
+  GrabbedObj: {fileID: 0}
+  grabbing: 0
+  grabbed: 0
+  immovable: 0
 --- !u!114 &855653042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8207,13 +8830,63 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855653033}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
+--- !u!59 &855653043
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855653033}
+  m_ConnectedBody: {fileID: 1842228906}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0.5, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!65 &855653044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855653033}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2.91}
+  m_Center: {x: -0.000000059604645, y: 0, z: 1.58}
 --- !u!1 &899026722
 GameObject:
   m_ObjectHideFlags: 0
@@ -8334,7 +9007,7 @@ GameObject:
   - component: {fileID: 924745206}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8496,7 +9169,122 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
+--- !u!1 &934461658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934461659}
+  - component: {fileID: 934461663}
+  - component: {fileID: 934461662}
+  - component: {fileID: 934461661}
+  - component: {fileID: 934461660}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &934461659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934461658}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.94, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 580480733}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &934461660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375ee59ea8c51e04b950532580207361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  startPoint: {fileID: 197353492}
+  endPoint: {fileID: 1329345758}
+  speed: 1
+--- !u!65 &934461661
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934461658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &934461662
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934461658}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d014780348e98fa4d8ea54c501bf97eb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &934461663
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934461658}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &991266240
 GameObject:
   m_ObjectHideFlags: 0
@@ -8515,7 +9303,7 @@ GameObject:
   - component: {fileID: 991266248}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8677,6 +9465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &995692880
 GameObject:
@@ -8692,11 +9481,10 @@ GameObject:
   - component: {fileID: 995692884}
   - component: {fileID: 995692881}
   - component: {fileID: 995692883}
-  - component: {fileID: 995692882}
   - component: {fileID: 995692888}
   m_Layer: 0
   m_Name: Arm (11)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8715,22 +9503,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &995692882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995692880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &995692883
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -8746,7 +9520,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -8858,6 +9632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1000650051
 GameObject:
@@ -8870,7 +9645,7 @@ GameObject:
   - component: {fileID: 1000650052}
   m_Layer: 0
   m_Name: FullArm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8910,11 +9685,10 @@ GameObject:
   - component: {fileID: 1006256124}
   - component: {fileID: 1006256121}
   - component: {fileID: 1006256123}
-  - component: {fileID: 1006256122}
   - component: {fileID: 1006256128}
   m_Layer: 0
   m_Name: Arm (22)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8933,22 +9707,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1006256122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006256120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1006256123
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -8964,7 +9724,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -9070,12 +9830,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006256120}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
 --- !u!1 &1020967317
 GameObject:
@@ -9192,7 +9953,7 @@ GameObject:
   - component: {fileID: 1049720577}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9354,6 +10115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1064117461
 GameObject:
@@ -9369,11 +10131,10 @@ GameObject:
   - component: {fileID: 1064117465}
   - component: {fileID: 1064117462}
   - component: {fileID: 1064117464}
-  - component: {fileID: 1064117463}
   - component: {fileID: 1064117469}
   m_Layer: 0
   m_Name: Arm (19)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9392,22 +10153,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1064117463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064117461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1064117464
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -9423,7 +10170,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1.0000001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -9529,12 +10276,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064117461}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1070229886
 GameObject:
@@ -9554,7 +10302,7 @@ GameObject:
   - component: {fileID: 1070229894}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9716,6 +10464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1072710493
 GameObject:
@@ -9735,7 +10484,7 @@ GameObject:
   - component: {fileID: 1072710501}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9897,6 +10646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1107543370
 GameObject:
@@ -9916,7 +10666,7 @@ GameObject:
   - component: {fileID: 1107543378}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10078,6 +10828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1131829763
 GameObject:
@@ -10176,11 +10927,10 @@ GameObject:
   - component: {fileID: 1138625217}
   - component: {fileID: 1138625214}
   - component: {fileID: 1138625216}
-  - component: {fileID: 1138625215}
   - component: {fileID: 1138625221}
   m_Layer: 0
   m_Name: Arm (16)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10199,22 +10949,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1138625215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138625213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1138625216
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -10230,7 +10966,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -10342,6 +11078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
 --- !u!1 &1151080094
 GameObject:
@@ -10357,11 +11094,10 @@ GameObject:
   - component: {fileID: 1151080098}
   - component: {fileID: 1151080095}
   - component: {fileID: 1151080097}
-  - component: {fileID: 1151080096}
   - component: {fileID: 1151080102}
   m_Layer: 0
   m_Name: Arm (22)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10380,22 +11116,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1151080096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151080094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1151080097
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -10411,7 +11133,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -10517,13 +11239,111 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151080094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
+--- !u!1 &1161286171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1161286175}
+  - component: {fileID: 1161286174}
+  - component: {fileID: 1161286173}
+  - component: {fileID: 1161286172}
+  m_Layer: 0
+  m_Name: Collision test (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1161286172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161286171}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1161286173
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161286171}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1161286174
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161286171}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1161286175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161286171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.14, y: 0, z: 9.85}
+  m_LocalScale: {x: 9.2287, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166165280
 GameObject:
   m_ObjectHideFlags: 0
@@ -10538,11 +11358,10 @@ GameObject:
   - component: {fileID: 1166165284}
   - component: {fileID: 1166165281}
   - component: {fileID: 1166165283}
-  - component: {fileID: 1166165282}
   - component: {fileID: 1166165288}
   m_Layer: 0
   m_Name: Arm (15)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10561,22 +11380,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1166165282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166165280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1166165283
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -10592,7 +11397,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.9920001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -10704,6 +11509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
 --- !u!1 &1176156786
 GameObject:
@@ -10719,11 +11525,10 @@ GameObject:
   - component: {fileID: 1176156790}
   - component: {fileID: 1176156787}
   - component: {fileID: 1176156789}
-  - component: {fileID: 1176156788}
   - component: {fileID: 1176156794}
   m_Layer: 0
   m_Name: Arm (18)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10742,22 +11547,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1176156788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176156786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1176156789
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -10773,7 +11564,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.35, y: 0, z: 0.493}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -10803,7 +11594,7 @@ SphereCollider:
   m_GameObject: {fileID: 1176156786}
   m_Material: {fileID: 13400000, guid: aaa976d200db4714d8b63b6b2f80d65f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -10885,7 +11676,318 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
+--- !u!1 &1194279555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1194279559}
+  - component: {fileID: 1194279558}
+  - component: {fileID: 1194279557}
+  - component: {fileID: 1194279556}
+  m_Layer: 31
+  m_Name: Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1194279556
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194279555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1194279557
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194279555}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8fbce3baebc52ee4e9befacb02e6234b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1194279558
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194279555}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1194279559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194279555}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5648229}
+  m_LocalScale: {x: 1.5151515, y: 1.5151515, z: 0.21180855}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1226626092}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1207394591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1207394595}
+  - component: {fileID: 1207394594}
+  - component: {fileID: 1207394593}
+  - component: {fileID: 1207394592}
+  m_Layer: 0
+  m_Name: Collision test (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1207394592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207394591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1207394593
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207394591}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1207394594
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207394591}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1207394595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207394591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.85, y: 0, z: -2.15}
+  m_LocalScale: {x: 2.4221783, y: 1, z: 5.76385}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1226626091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1226626092}
+  - component: {fileID: 1226626096}
+  - component: {fileID: 1226626095}
+  - component: {fileID: 1226626094}
+  - component: {fileID: 1226626097}
+  m_Layer: 0
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1226626092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226626091}
+  m_LocalRotation: {x: -0, y: -0.32861945, z: -0, w: 0.9444625}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.66, y: 0.6599999, z: 4.7212443}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1729179249}
+  - {fileID: 1194279559}
+  m_Father: {fileID: 256721391}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -38.37, z: 0}
+--- !u!65 &1226626094
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226626091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1226626095
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226626091}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1226626096
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226626091}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1226626097
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226626091}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 94
+  m_CollisionDetection: 0
 --- !u!1 &1242841148
 GameObject:
   m_ObjectHideFlags: 0
@@ -11002,7 +12104,7 @@ GameObject:
   - component: {fileID: 1265123882}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11164,6 +12266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1276913254
 GameObject:
@@ -11183,7 +12286,7 @@ GameObject:
   - component: {fileID: 1276913262}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11345,6 +12448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1306359993
 GameObject:
@@ -11461,7 +12565,7 @@ GameObject:
   - component: {fileID: 1315467321}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11623,6 +12727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1316606878
 GameObject:
@@ -11642,7 +12747,7 @@ GameObject:
   - component: {fileID: 1316606886}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11804,6 +12909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1317669461
 GameObject:
@@ -11823,7 +12929,7 @@ GameObject:
   - component: {fileID: 1317669469}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11985,6 +13091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1319767085
 GameObject:
@@ -12000,11 +13107,10 @@ GameObject:
   - component: {fileID: 1319767089}
   - component: {fileID: 1319767086}
   - component: {fileID: 1319767088}
-  - component: {fileID: 1319767087}
   - component: {fileID: 1319767093}
   m_Layer: 0
   m_Name: Arm (13)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12023,22 +13129,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1319767087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319767085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1319767088
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -12054,7 +13146,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1.0000001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -12166,6 +13258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1326483740
 GameObject:
@@ -12185,7 +13278,7 @@ GameObject:
   - component: {fileID: 1326483748}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12347,7 +13440,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
+--- !u!1 &1329345758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329345759}
+  m_Layer: 0
+  m_Name: 'endPos '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1329345759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329345758}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 580480733}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1336869619
 GameObject:
   m_ObjectHideFlags: 0
@@ -12391,7 +13516,7 @@ GameObject:
   - component: {fileID: 1341474372}
   m_Layer: 0
   m_Name: FullArm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12435,7 +13560,7 @@ GameObject:
   - component: {fileID: 1345083019}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12597,6 +13722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1345210372
 GameObject:
@@ -12616,7 +13742,7 @@ GameObject:
   - component: {fileID: 1345210380}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12778,6 +13904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1346492006
 GameObject:
@@ -12790,7 +13917,7 @@ GameObject:
   - component: {fileID: 1346492007}
   m_Layer: 0
   m_Name: Arms
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12836,7 +13963,7 @@ GameObject:
   - component: {fileID: 1360315412}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12998,6 +14125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1361821717
 GameObject:
@@ -13017,7 +14145,7 @@ GameObject:
   - component: {fileID: 1361821725}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13179,6 +14307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1384947673
 GameObject:
@@ -13198,7 +14327,7 @@ GameObject:
   - component: {fileID: 1384947681}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13360,6 +14489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1398326017
 GameObject:
@@ -13375,11 +14505,10 @@ GameObject:
   - component: {fileID: 1398326021}
   - component: {fileID: 1398326018}
   - component: {fileID: 1398326020}
-  - component: {fileID: 1398326019}
   - component: {fileID: 1398326025}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13400,20 +14529,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1398326019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398326017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1398326020
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -13429,7 +14544,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1.0000001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -13541,7 +14656,138 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
+--- !u!1 &1400399910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400399916}
+  - component: {fileID: 1400399915}
+  - component: {fileID: 1400399914}
+  - component: {fileID: 1400399913}
+  - component: {fileID: 1400399912}
+  - component: {fileID: 1400399911}
+  m_Layer: 0
+  m_Name: ImmovableTest (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1400399911
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400399910}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &1400399912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400399910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 50
+  Dampner: 1
+  inWater: 0
+--- !u!65 &1400399913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400399910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1400399914
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400399910}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5fe26a4351d72764597210eb2b96bb81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1400399915
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400399910}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1400399916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400399910}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.55, y: 0, z: 14.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1526442230}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1404315186
 GameObject:
   m_ObjectHideFlags: 0
@@ -13702,12 +14948,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433215518}
-  m_LocalRotation: {x: 0.67559016, y: 0, z: 0, w: 0.7372774}
+  m_LocalRotation: {x: 0.67559016, y: -0, z: -0, w: 0.7372774}
   m_LocalPosition: {x: 0, y: 8.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1687301626}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 85, y: 0, z: 0}
 --- !u!114 &1433215522
@@ -13754,7 +15000,7 @@ GameObject:
   - component: {fileID: 1434920919}
   m_Layer: 0
   m_Name: Tentacle (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13816,7 +15062,7 @@ GameObject:
   - component: {fileID: 1440558138}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13978,6 +15224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1450487530
 GameObject:
@@ -13997,7 +15244,7 @@ GameObject:
   - component: {fileID: 1450487538}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14159,6 +15406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1457045192
 GameObject:
@@ -14174,11 +15422,10 @@ GameObject:
   - component: {fileID: 1457045196}
   - component: {fileID: 1457045193}
   - component: {fileID: 1457045195}
-  - component: {fileID: 1457045194}
   - component: {fileID: 1457045200}
   m_Layer: 0
   m_Name: Arm (14)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14197,22 +15444,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1457045194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457045192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1457045195
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -14228,7 +15461,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -14340,6 +15573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
 --- !u!1 &1474035481
 GameObject:
@@ -14355,11 +15589,10 @@ GameObject:
   - component: {fileID: 1474035485}
   - component: {fileID: 1474035482}
   - component: {fileID: 1474035484}
-  - component: {fileID: 1474035483}
   - component: {fileID: 1474035489}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14380,20 +15613,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1474035483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474035481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1474035484
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -14409,7 +15628,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.54}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -14515,12 +15734,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474035481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 3
   inWater: 0
 --- !u!1 &1480342622
 GameObject:
@@ -14540,7 +15760,7 @@ GameObject:
   - component: {fileID: 1480342630}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14702,6 +15922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1488547798
 GameObject:
@@ -14717,11 +15938,10 @@ GameObject:
   - component: {fileID: 1488547802}
   - component: {fileID: 1488547799}
   - component: {fileID: 1488547801}
-  - component: {fileID: 1488547800}
   - component: {fileID: 1488547806}
   m_Layer: 0
   m_Name: Arm (8)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14740,22 +15960,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1488547800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488547798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1488547801
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -14771,7 +15977,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -14883,7 +16089,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
+--- !u!1 &1488608935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1488608939}
+  - component: {fileID: 1488608938}
+  - component: {fileID: 1488608937}
+  - component: {fileID: 1488608936}
+  m_Layer: 0
+  m_Name: Collision test (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1488608936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488608935}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1488608937
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488608935}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1488608938
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488608935}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1488608939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488608935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.53, y: 0, z: -5.19}
+  m_LocalScale: {x: 19.014534, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497158202
 GameObject:
   m_ObjectHideFlags: 0
@@ -14898,11 +16202,10 @@ GameObject:
   - component: {fileID: 1497158206}
   - component: {fileID: 1497158203}
   - component: {fileID: 1497158205}
-  - component: {fileID: 1497158204}
   - component: {fileID: 1497158210}
   m_Layer: 0
   m_Name: Arm (16)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14921,22 +16224,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1497158204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497158202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1497158205
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -14952,7 +16241,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -15064,6 +16353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
 --- !u!1 &1499354981
 GameObject:
@@ -15193,7 +16483,7 @@ GameObject:
   - component: {fileID: 1507616464}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15355,7 +16645,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
+--- !u!1 &1526442229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526442230}
+  m_Layer: 0
+  m_Name: TestObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1526442230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526442229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 612247889}
+  - {fileID: 1588991798}
+  - {fileID: 536608590}
+  - {fileID: 1400399916}
+  - {fileID: 38381265}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1535604868
 GameObject:
   m_ObjectHideFlags: 0
@@ -15420,7 +16747,7 @@ GameObject:
   - component: {fileID: 1538516122}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15582,6 +16909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1556142817
 GameObject:
@@ -15601,7 +16929,7 @@ GameObject:
   - component: {fileID: 1556142825}
   m_Layer: 0
   m_Name: Arm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15763,6 +17091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1561827542
 GameObject:
@@ -15775,7 +17104,7 @@ GameObject:
   - component: {fileID: 1561827543}
   m_Layer: 0
   m_Name: FullArm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15801,6 +17130,233 @@ Transform:
   m_Father: {fileID: 1346492007}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!1 &1588991792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588991798}
+  - component: {fileID: 1588991797}
+  - component: {fileID: 1588991796}
+  - component: {fileID: 1588991795}
+  - component: {fileID: 1588991794}
+  - component: {fileID: 1588991793}
+  m_Layer: 0
+  m_Name: ImmovableTest (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1588991793
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588991792}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &1588991794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588991792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 50
+  Dampner: 1
+  inWater: 0
+--- !u!65 &1588991795
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588991792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1588991796
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588991792}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5fe26a4351d72764597210eb2b96bb81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1588991797
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588991792}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1588991798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588991792}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.55, y: 0, z: 12.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1526442230}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1602077624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1602077628}
+  - component: {fileID: 1602077627}
+  - component: {fileID: 1602077626}
+  - component: {fileID: 1602077625}
+  m_Layer: 0
+  m_Name: Collision test (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1602077625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602077624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1602077626
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602077624}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1602077627
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602077624}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1602077628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602077624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09, y: 0, z: -5.19}
+  m_LocalScale: {x: 10.789, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602152610
 GameObject:
   m_ObjectHideFlags: 0
@@ -15811,7 +17367,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1602152611}
   - component: {fileID: 1602152612}
-  - component: {fileID: 1602152613}
   m_Layer: 0
   m_Name: LimbConnector
   m_TagString: Untagged
@@ -15831,8 +17386,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 168187241}
-  m_RootOrder: 0
+  m_Father: {fileID: 473156851}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1602152612
 Rigidbody:
@@ -15846,46 +17401,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!59 &1602152613
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602152610}
-  m_ConnectedBody: {fileID: 1612782914}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_UseSpring: 0
-  m_Spring:
-    spring: 0
-    damper: 0
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
-    max: 0
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!1 &1604161565
 GameObject:
   m_ObjectHideFlags: 0
@@ -15900,11 +17419,10 @@ GameObject:
   - component: {fileID: 1604161569}
   - component: {fileID: 1604161566}
   - component: {fileID: 1604161568}
-  - component: {fileID: 1604161567}
   - component: {fileID: 1604161573}
   m_Layer: 0
   m_Name: Arm (13)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15923,22 +17441,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1604161567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604161565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1604161568
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -15954,7 +17458,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1.0000001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -16066,6 +17570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1612782913
 GameObject:
@@ -16084,7 +17589,7 @@ GameObject:
   - component: {fileID: 1612782920}
   m_Layer: 0
   m_Name: Squid
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16124,7 +17629,7 @@ MonoBehaviour:
   rotModel: {fileID: 1993885858}
   test: 0
   ModelRotV: {x: 0, y: 0, z: 0}
-  turnSpeed: 4
+  turnSpeed: 3
 --- !u!4 &1612782916
 Transform:
   m_ObjectHideFlags: 0
@@ -16156,7 +17661,7 @@ MonoBehaviour:
   pb: {fileID: 1612782915}
   chargeSpeed: 2
   armRotValue: 90
-  boostAmount: 8
+  boostAmount: 7
   release: 0
   currentArmRot: 0
   currentBoostAmount: 0
@@ -16185,6 +17690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
 --- !u!65 &1612782920
 BoxCollider:
@@ -16217,7 +17723,7 @@ GameObject:
   - component: {fileID: 1626066972}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16379,6 +17885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1634998794
 GameObject:
@@ -16508,7 +18015,7 @@ GameObject:
   - component: {fileID: 1665304600}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16670,7 +18177,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
+--- !u!1 &1687301625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687301626}
+  - component: {fileID: 1687301627}
+  m_Layer: 0
+  m_Name: Cam Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1687301626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687301625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1433215521}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1687301627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687301625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734be0cc7b2cee649bd71a2a37fe0dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1612782913}
 --- !u!1 &1692295913
 GameObject:
   m_ObjectHideFlags: 0
@@ -16682,7 +18236,7 @@ GameObject:
   - component: {fileID: 1692295914}
   m_Layer: 0
   m_Name: FullArm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16722,12 +18276,13 @@ GameObject:
   - component: {fileID: 1708537801}
   - component: {fileID: 1708537800}
   - component: {fileID: 1708537799}
-  - component: {fileID: 1708537798}
   - component: {fileID: 1708537797}
   - component: {fileID: 1708537804}
+  - component: {fileID: 1708537805}
+  - component: {fileID: 1708537806}
   m_Layer: 0
   m_Name: Grabb
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16746,6 +18301,7 @@ Transform:
   m_Children:
   - {fileID: 1242841149}
   - {fileID: 1499354982}
+  - {fileID: 2068309138}
   m_Father: {fileID: 1434920919}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16763,26 +18319,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   on: 1
   cam: {fileID: 1433215520}
-  speed: 5
+  speed: 6
   screenPos: {x: 0, y: 0, z: 0}
   worldPosition: {x: 0, y: 0, z: 0}
   Target: {fileID: 1499354981}
   mainBody: {fileID: 1612782913}
   maxDist: 0
---- !u!114 &1708537798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708537794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
+  dragForce: 3
+  carryObj: {fileID: 2068309137}
+  GrabHinge: {fileID: 1708537805}
+  GrabbedObj: {fileID: 0}
+  grabbing: 0
+  grabbed: 0
+  immovable: 0
 --- !u!59 &1708537799
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -16798,7 +18347,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -16905,13 +18454,160 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708537794}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
+--- !u!59 &1708537805
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708537794}
+  m_ConnectedBody: {fileID: 2068309139}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0.5, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!65 &1708537806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708537794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2.91}
+  m_Center: {x: 0, y: 0, z: 1.58}
+--- !u!1 &1729179248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1729179249}
+  - component: {fileID: 1729179253}
+  - component: {fileID: 1729179252}
+  - component: {fileID: 1729179251}
+  m_Layer: 0
+  m_Name: LeverTip (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1729179249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729179248}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5648229}
+  m_LocalScale: {x: 1.5151515, y: 1.5151517, z: 0.21180855}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1226626092}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1729179251
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729179248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1729179252
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729179248}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8fbce3baebc52ee4e9befacb02e6234b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1729179253
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729179248}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1733639969
 GameObject:
   m_ObjectHideFlags: 0
@@ -16926,7 +18622,7 @@ GameObject:
   - component: {fileID: 1733639971}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17027,7 +18723,7 @@ GameObject:
   - component: {fileID: 1742969523}
   m_Layer: 0
   m_Name: Arm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17189,6 +18885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1761679654
 GameObject:
@@ -17208,7 +18905,7 @@ GameObject:
   - component: {fileID: 1761679662}
   m_Layer: 0
   m_Name: Arm (2)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17370,6 +19067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1765437371
 GameObject:
@@ -17389,7 +19087,7 @@ GameObject:
   - component: {fileID: 1765437379}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17551,6 +19249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1770893650
 GameObject:
@@ -17566,11 +19265,10 @@ GameObject:
   - component: {fileID: 1770893654}
   - component: {fileID: 1770893651}
   - component: {fileID: 1770893653}
-  - component: {fileID: 1770893652}
   - component: {fileID: 1770893658}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17591,20 +19289,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1770893652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770893650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1770893653
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -17620,7 +19304,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -17732,7 +19416,138 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
+--- !u!1 &1800125595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800125601}
+  - component: {fileID: 1800125600}
+  - component: {fileID: 1800125599}
+  - component: {fileID: 1800125598}
+  - component: {fileID: 1800125597}
+  - component: {fileID: 1800125596}
+  m_Layer: 0
+  m_Name: GrabTest (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1800125596
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800125595}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &1800125597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800125595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 50
+  Dampner: 1
+  inWater: 0
+--- !u!65 &1800125598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800125595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1800125599
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800125595}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5fe26a4351d72764597210eb2b96bb81, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1800125600
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800125595}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1800125601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800125595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.93, y: 0, z: 11.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802777114
 GameObject:
   m_ObjectHideFlags: 0
@@ -17747,11 +19562,10 @@ GameObject:
   - component: {fileID: 1802777118}
   - component: {fileID: 1802777115}
   - component: {fileID: 1802777117}
-  - component: {fileID: 1802777116}
   - component: {fileID: 1802777122}
   m_Layer: 0
   m_Name: Arm (5)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17772,20 +19586,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1802777116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802777114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1802777117
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -17801,7 +19601,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -17913,6 +19713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1811145288
 GameObject:
@@ -17928,11 +19729,10 @@ GameObject:
   - component: {fileID: 1811145292}
   - component: {fileID: 1811145289}
   - component: {fileID: 1811145291}
-  - component: {fileID: 1811145290}
   - component: {fileID: 1811145296}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17953,20 +19753,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1811145290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811145288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1811145291
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -17982,7 +19768,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1.0000001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -18094,6 +19880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1814426289
 GameObject:
@@ -18109,11 +19896,10 @@ GameObject:
   - component: {fileID: 1814426293}
   - component: {fileID: 1814426290}
   - component: {fileID: 1814426292}
-  - component: {fileID: 1814426291}
   - component: {fileID: 1814426297}
   m_Layer: 0
   m_Name: Arm (12)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18132,22 +19918,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1814426291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814426289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1814426292
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -18163,7 +19935,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.35, y: 0, z: 0.493}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -18193,7 +19965,7 @@ SphereCollider:
   m_GameObject: {fileID: 1814426289}
   m_Material: {fileID: 13400000, guid: aaa976d200db4714d8b63b6b2f80d65f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -18275,6 +20047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1822719888
 GameObject:
@@ -18294,7 +20067,7 @@ GameObject:
   - component: {fileID: 1822719896}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18456,6 +20229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &1826824179
 GameObject:
@@ -18555,6 +20329,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1842228904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1842228905}
+  - component: {fileID: 1842228906}
+  m_Layer: 0
+  m_Name: CarryObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1842228905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842228904}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 855653034}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1842228906
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842228904}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1896129967
 GameObject:
   m_ObjectHideFlags: 0
@@ -18756,8 +20578,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902343292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.45, z: -2.42}
-  m_LocalScale: {x: 15.774, y: 4, z: 16.95128}
+  m_LocalPosition: {x: 5.93, y: -0.45, z: 0.11}
+  m_LocalScale: {x: 35.288013, y: 4, z: 19.727003}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -18777,11 +20599,10 @@ GameObject:
   - component: {fileID: 1907927748}
   - component: {fileID: 1907927745}
   - component: {fileID: 1907927747}
-  - component: {fileID: 1907927746}
   - component: {fileID: 1907927752}
   m_Layer: 0
   m_Name: Arm (12)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18800,22 +20621,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1907927746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907927744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1907927747
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -18831,7 +20638,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.35, y: 0, z: 0.493}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -18861,7 +20668,7 @@ SphereCollider:
   m_GameObject: {fileID: 1907927744}
   m_Material: {fileID: 13400000, guid: aaa976d200db4714d8b63b6b2f80d65f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -18943,6 +20750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1938774118
 GameObject:
@@ -18958,11 +20766,10 @@ GameObject:
   - component: {fileID: 1938774122}
   - component: {fileID: 1938774119}
   - component: {fileID: 1938774121}
-  - component: {fileID: 1938774120}
   - component: {fileID: 1938774126}
   m_Layer: 0
   m_Name: Arm (17)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18981,22 +20788,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1938774120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938774118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1938774121
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -19012,7 +20805,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -19124,7 +20917,190 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 7
   inWater: 0
+--- !u!1 &1981961205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1981961209}
+  - component: {fileID: 1981961208}
+  - component: {fileID: 1981961207}
+  - component: {fileID: 1981961206}
+  m_Layer: 0
+  m_Name: Collision test (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1981961206
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981961205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1981961207
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981961205}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1981961208
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981961205}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1981961209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981961205}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.14, y: 0, z: -4.43}
+  m_LocalScale: {x: 2.5818076, y: 1, z: 1.8729}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1983710252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983710253}
+  - component: {fileID: 1983710255}
+  - component: {fileID: 1983710254}
+  m_Layer: 0
+  m_Name: LimbConnector (1)
+  m_TagString: Squid
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1983710253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983710252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 168187241}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!59 &1983710254
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983710252}
+  m_ConnectedBody: {fileID: 1612782914}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &1983710255
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983710252}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1986812301
 GameObject:
   m_ObjectHideFlags: 0
@@ -19139,11 +21115,10 @@ GameObject:
   - component: {fileID: 1986812305}
   - component: {fileID: 1986812302}
   - component: {fileID: 1986812304}
-  - component: {fileID: 1986812303}
   - component: {fileID: 1986812309}
   m_Layer: 0
   m_Name: Arm (11)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19162,22 +21137,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &1986812303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986812301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &1986812304
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -19193,7 +21154,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -19305,6 +21266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &1993885858
 GameObject:
@@ -19317,7 +21279,7 @@ GameObject:
   - component: {fileID: 1993885859}
   m_Layer: 0
   m_Name: RotationThing
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19338,6 +21300,103 @@ Transform:
   m_Father: {fileID: 1612782916}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1995005487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995005488}
+  - component: {fileID: 1995005491}
+  - component: {fileID: 1995005490}
+  - component: {fileID: 1995005489}
+  m_Layer: 31
+  m_Name: Stoper (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1995005488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995005487}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: -2.6, y: 0, z: -1.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 256721391}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!65 &1995005489
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995005487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1995005490
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995005487}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8fbce3baebc52ee4e9befacb02e6234b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1995005491
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995005487}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2012058092
 GameObject:
   m_ObjectHideFlags: 0
@@ -19349,7 +21408,7 @@ GameObject:
   - component: {fileID: 2012058093}
   m_Layer: 0
   m_Name: FullArm
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19393,7 +21452,7 @@ GameObject:
   - component: {fileID: 2021539086}
   m_Layer: 0
   m_Name: Arm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19555,6 +21614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
 --- !u!1 &2023761789
 GameObject:
@@ -19570,11 +21630,10 @@ GameObject:
   - component: {fileID: 2023761793}
   - component: {fileID: 2023761790}
   - component: {fileID: 2023761792}
-  - component: {fileID: 2023761791}
   - component: {fileID: 2023761797}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19595,20 +21654,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2023761791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023761789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &2023761792
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -19624,7 +21669,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -19736,6 +21781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 5
   inWater: 0
 --- !u!1 &2026439959
 GameObject:
@@ -19751,11 +21797,10 @@ GameObject:
   - component: {fileID: 2026439963}
   - component: {fileID: 2026439960}
   - component: {fileID: 2026439962}
-  - component: {fileID: 2026439961}
   - component: {fileID: 2026439967}
   m_Layer: 0
   m_Name: Arm (20)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19774,22 +21819,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &2026439961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026439959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &2026439962
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -19805,7 +21836,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 1}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -19911,12 +21942,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026439959}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
 --- !u!1 &2057199362
 GameObject:
@@ -19936,7 +21968,7 @@ GameObject:
   - component: {fileID: 2057199370}
   m_Layer: 0
   m_Name: Arm (4)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20098,7 +22130,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  Dampner: 1
   inWater: 0
+--- !u!1 &2068309137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068309138}
+  - component: {fileID: 2068309139}
+  m_Layer: 0
+  m_Name: CarryObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068309138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068309137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1708537795}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2068309139
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068309137}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2073660769
 GameObject:
   m_ObjectHideFlags: 0
@@ -20110,7 +22191,7 @@ GameObject:
   - component: {fileID: 2073660770}
   m_Layer: 0
   m_Name: FullArm (1)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20150,11 +22231,10 @@ GameObject:
   - component: {fileID: 2081223049}
   - component: {fileID: 2081223046}
   - component: {fileID: 2081223048}
-  - component: {fileID: 2081223047}
   - component: {fileID: 2081223053}
   m_Layer: 0
   m_Name: Arm (21)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20173,22 +22253,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &2081223047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081223045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444d0b46b4c2624797e0c4e176819a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AB: {fileID: 1612782917}
-  HJ: {fileID: 0}
 --- !u!59 &2081223048
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -20204,7 +22270,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0.9920001}
   m_UseSpring: 1
   m_Spring:
-    spring: 100
+    spring: 1
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -20310,12 +22376,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081223045}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0411f639bff90d047b5ea719c61af89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: -50
+  Dampner: 1
   inWater: 0
 --- !u!1 &2090664470
 GameObject:
@@ -20443,7 +22510,7 @@ GameObject:
   - component: {fileID: 2108456642}
   m_Layer: 0
   m_Name: FullArm (3)
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20705,7 +22772,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.8540001, z: -0.268}
+  m_ConnectedAnchor: {x: 0, y: -0.8540002, z: -0.2679999}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -20879,7 +22946,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.47000086, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.47000086, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -21030,7 +23097,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.54333365, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.543334, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -21181,7 +23248,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.46999925, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.46999967, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -21332,7 +23399,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.47000086, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.47000086, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -21504,7 +23571,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.5933316, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.5933316, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -21634,7 +23701,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.51666576, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.51666576, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -21785,7 +23852,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.54333365, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.543334, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -21936,7 +24003,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.4500023, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.45000112, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -22087,7 +24154,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.4633331, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.4633331, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -22279,7 +24346,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.268, y: -0.8540001, z: 0}
+  m_ConnectedAnchor: {x: 0.26800013, y: -0.8540002, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -22430,7 +24497,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.51666576, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.51666576, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -22581,7 +24648,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.47000086, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.47000086, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -22732,7 +24799,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.4633331, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.4633331, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -22811,7 +24878,7 @@ Transform:
   - {fileID: 6734665602881088406}
   - {fileID: 6734665604499040311}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6734665603056541032
 Animator:
@@ -22849,7 +24916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6734665603104154401
 Transform:
   m_ObjectHideFlags: 0
@@ -22940,7 +25007,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.54333365, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.543334, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -23112,7 +25179,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.53999895, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.53999895, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -23242,7 +25309,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.4500023, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.45000112, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -23393,7 +25460,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.5933316, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.5933316, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -23544,7 +25611,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.4500023, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.45000112, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -23695,7 +25762,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.4633331, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.4633331, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -23846,7 +25913,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.8540001, z: 0.268}
+  m_ConnectedAnchor: {x: 0, y: -0.8540002, z: 0.2679999}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -23997,7 +26064,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.51666576, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.51666576, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -24189,7 +26256,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.5933316, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.5933316, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -24456,7 +26523,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.47000086, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.47000086, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -24607,7 +26674,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.4500023, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.45000112, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -24758,7 +26825,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.53999895, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.53999895, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -24909,7 +26976,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.46999925, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.46999967, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -24982,7 +27049,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.5133342, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.5133342, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -25211,7 +27278,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.4633331, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.4633331, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -25362,7 +27429,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.5933316, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.5933316, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -25513,7 +27580,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.51666576, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.51666576, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -25664,7 +27731,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.53999895, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.53999895, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -25836,7 +27903,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.46999925, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.46999967, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -25967,7 +28034,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.5133342, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.5133342, z: 4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -26118,7 +28185,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.5133342, z: 0}
+  m_ConnectedAnchor: {x: -0.00000039736432, y: -0.5133342, z: -4.736951e-14}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -26268,7 +28335,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.53999895, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.53999895, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -26419,7 +28486,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.54333365, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.543334, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -26611,7 +28678,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.268, y: -0.8540001, z: 0}
+  m_ConnectedAnchor: {x: -0.26800013, y: -0.8540002, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -26804,7 +28871,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.5133342, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.5133342, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
@@ -26954,7 +29021,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.46999925, z: 0}
+  m_ConnectedAnchor: {x: 0.00000039736426, y: -0.46999967, z: 0}
   m_UseSpring: 1
   m_Spring:
     spring: 999
