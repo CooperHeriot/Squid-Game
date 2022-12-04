@@ -9,6 +9,10 @@ public class Mechanism : MonoBehaviour
     public Door dor;
 
     public float dist;
+
+    //public bool Lever;
+   // public float Max, Min;
+    //public GameObject handle;
     // Start is called before the first frame update
     void Start()
     {

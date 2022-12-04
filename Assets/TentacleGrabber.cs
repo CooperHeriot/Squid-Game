@@ -44,7 +44,7 @@ public class TentacleGrabber : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (on == true)
         {
@@ -65,20 +65,7 @@ public class TentacleGrabber : MonoBehaviour
             } else
             {
                 speed = speedHolder;
-            }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                grabbing = !grabbing;
-            }
-        }
-
-       
-        if (grabbing == false)
-        {
-            grabbed = false;
-            immovable = false;
-            GrabHinge.connectedBody = carryObj.GetComponent<Rigidbody>();
+            }           
         }
 
         if (immovable == true)
@@ -89,9 +76,28 @@ public class TentacleGrabber : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (on == true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                grabbing = !grabbing;
+            }
+
+            if (grabbing == false)
+            {
+                grabbed = false;
+                immovable = false;
+                GrabHinge.connectedBody = carryObj.GetComponent<Rigidbody>();
+            }
+        }        
+    }
+
+
     void OnTriggerEnter(Collider other)
     {
-        if (grabbing == true && grabbed == false && other.GetComponent<Rigidbody>() != null && other.transform.tag != "Squid")
+        if (grabbing == true && grabbed == false && other.GetComponent<Rigidbody>() != null && other.transform.tag != "Squid" && other.transform.tag != "MainSquid")
         {
             GrabHinge.connectedBody = other.GetComponent<Rigidbody>();
             grabbed = true;

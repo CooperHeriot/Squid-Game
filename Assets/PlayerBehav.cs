@@ -16,6 +16,9 @@ public class PlayerBehav : MonoBehaviour
     public Vector3 ModelRotV;
     public float turnSpeed;
 
+    public float boostAm;
+    public bool boost;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -83,6 +86,15 @@ public class PlayerBehav : MonoBehaviour
             model.transform.localRotation = Quaternion.Euler(ModelRotV);
             //transform.rotation = Quaternion.Lerp(transform.rotation, pivot.transform.rotation, 2f * Time.deltaTime);
 
+
+           if (boost == true)
+            {
+                Vector3 direction = transform.position - pivotPoint.transform.position;
+
+                rb.AddForce(direction * boostAm, ForceMode.VelocityChange);
+                boost = false;
+            }
+        
         }
 
 
@@ -93,9 +105,8 @@ public class PlayerBehav : MonoBehaviour
 
     public void Boost(float _Amount)
     {
-        Vector3 direction = transform.position - pivotPoint.transform.position;
+        boostAm = _Amount;
 
-        rb.AddForce(direction * _Amount, ForceMode.VelocityChange);
-
+        boost = true;
     }
 }
