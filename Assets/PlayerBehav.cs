@@ -19,6 +19,11 @@ public class PlayerBehav : MonoBehaviour
     public float boostAm;
     public bool boost;
 
+    public GameObject TPivot, TPoint;
+
+    public bool LookAtGrab;
+    public TentacleSwap tentSwap;
+    public GameObject Tent;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -54,7 +59,15 @@ public class PlayerBehav : MonoBehaviour
 
                 //rotModel.transform.rotation = Quaternion.LookRotation(moveRot);
             }*/
-            rotModel.transform.rotation = Quaternion.Slerp(rotModel.transform.rotation, Quaternion.LookRotation(transform.position - pivotPoint.transform.position), turnSpeed * Time.deltaTime);
+            if (LookAtGrab == false)
+            {
+                rotModel.transform.rotation = Quaternion.Slerp(rotModel.transform.rotation, Quaternion.LookRotation(transform.position - pivotPoint.transform.position), turnSpeed * Time.deltaTime);
+            } else
+            {
+                rotModel.transform.rotation = Quaternion.Slerp(rotModel.transform.rotation, Quaternion.LookRotation(transform.position - TPoint.transform.position), (turnSpeed / 2) * Time.deltaTime);
+            }
+
+            
 
             //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(transform.position - Target.transform.position), TurnSpeed * Time.deltaTime);
             //rotModel.transform.rotation = Quaternion.LookRotation(pivotPoint.transform.position);
@@ -94,7 +107,27 @@ public class PlayerBehav : MonoBehaviour
                 rb.AddForce(direction * boostAm, ForceMode.VelocityChange);
                 boost = false;
             }
-        
+
+
+
+           if (Input.GetKey(KeyCode.F))
+            {
+                LookAtGrab = true;
+            } else
+            {
+                LookAtGrab = false;
+            }
+
+           if (tentSwap.swap == true)
+            {
+                Tent = tentSwap.Tentacle1;
+            } else
+            {
+                Tent = tentSwap.Tentacle2;
+            }
+
+            TPivot.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - Tent.transform.position), 1);
+
         }
 
 

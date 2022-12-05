@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 8042353}
   - component: {fileID: 8042355}
   - component: {fileID: 8042360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (17)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -732,6 +732,89 @@ Transform:
   m_Father: {fileID: 1526442230}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &46101722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46101723}
+  - component: {fileID: 46101725}
+  - component: {fileID: 46101724}
+  m_Layer: 0
+  m_Name: PiotTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &46101723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46101722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 527314705}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &46101724
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46101722}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 62044a8febfb565498a90e69d00b32d8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &46101725
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46101722}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &77827291
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +830,7 @@ GameObject:
   - component: {fileID: 77827292}
   - component: {fileID: 77827294}
   - component: {fileID: 77827299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (9)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -1155,7 +1238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137313897}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.13, y: 0, z: 0.53}
+  m_LocalPosition: {x: 9.13, y: 0, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1616,7 +1699,7 @@ GameObject:
   - component: {fileID: 218796720}
   - component: {fileID: 218796722}
   - component: {fileID: 218796727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (20)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -1889,13 +1972,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244934522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 26.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1612782916}
   - {fileID: 168187241}
   - {fileID: 1535604869}
+  - {fileID: 1887592674}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1914,7 +1998,7 @@ GameObject:
   - component: {fileID: 253828677}
   - component: {fileID: 253828679}
   - component: {fileID: 253828684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (15)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -2081,7 +2165,7 @@ GameObject:
   - component: {fileID: 261552900}
   - component: {fileID: 261552902}
   - component: {fileID: 261552907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (6)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -2430,7 +2514,7 @@ GameObject:
   - component: {fileID: 280273566}
   - component: {fileID: 280273568}
   - component: {fileID: 280273573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (21)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -2740,7 +2824,7 @@ GameObject:
   - component: {fileID: 303152005}
   - component: {fileID: 303152007}
   - component: {fileID: 303152012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -2909,7 +2993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &317529160
 Transform:
   m_ObjectHideFlags: 0
@@ -3733,7 +3817,7 @@ GameObject:
   - component: {fileID: 390818687}
   - component: {fileID: 390818689}
   - component: {fileID: 390818694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (5)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -3900,7 +3984,7 @@ GameObject:
   - component: {fileID: 443266912}
   - component: {fileID: 443266914}
   - component: {fileID: 443266919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (3)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -4067,7 +4151,7 @@ GameObject:
   - component: {fileID: 443949277}
   - component: {fileID: 443949279}
   - component: {fileID: 443949284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (10)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -4234,7 +4318,7 @@ GameObject:
   - component: {fileID: 457111822}
   - component: {fileID: 457111824}
   - component: {fileID: 457111829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (14)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -4401,7 +4485,7 @@ GameObject:
   - component: {fileID: 457881205}
   - component: {fileID: 457881207}
   - component: {fileID: 457881212}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (9)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -4568,7 +4652,7 @@ GameObject:
   - component: {fileID: 459402561}
   - component: {fileID: 459402563}
   - component: {fileID: 459402568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (18)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -4818,7 +4902,7 @@ GameObject:
   - component: {fileID: 520379141}
   - component: {fileID: 520379143}
   - component: {fileID: 520379148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (2)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -4970,6 +5054,38 @@ MonoBehaviour:
   force: -50
   Dampner: 5
   inWater: 0
+--- !u!1 &527314704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527314705}
+  m_Layer: 0
+  m_Name: TPiv
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527314705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527314704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 46101723}
+  m_Father: {fileID: 1887592674}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &536608584
 GameObject:
   m_ObjectHideFlags: 0
@@ -5352,7 +5468,7 @@ GameObject:
   - component: {fileID: 568193164}
   - component: {fileID: 568193166}
   - component: {fileID: 568193171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (2)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -5519,7 +5635,7 @@ GameObject:
   - component: {fileID: 609050519}
   - component: {fileID: 609050521}
   - component: {fileID: 609050526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (7)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -5816,7 +5932,7 @@ GameObject:
   - component: {fileID: 625199569}
   - component: {fileID: 625199571}
   - component: {fileID: 625199576}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (6)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -6529,7 +6645,7 @@ GameObject:
   - component: {fileID: 670233115}
   - component: {fileID: 670233117}
   - component: {fileID: 670233122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (3)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -6878,7 +6994,7 @@ GameObject:
   - component: {fileID: 686085646}
   - component: {fileID: 686085648}
   - component: {fileID: 686085653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (10)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -7773,7 +7889,7 @@ GameObject:
   - component: {fileID: 723072513}
   - component: {fileID: 723072515}
   - component: {fileID: 723072520}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (7)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -8122,7 +8238,7 @@ GameObject:
   - component: {fileID: 754275820}
   - component: {fileID: 754275822}
   - component: {fileID: 754275827}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (19)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -8653,7 +8769,7 @@ GameObject:
   - component: {fileID: 813287462}
   - component: {fileID: 813287464}
   - component: {fileID: 813287469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (8)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -9275,7 +9391,7 @@ MonoBehaviour:
   Target: {fileID: 1634998794}
   mainBody: {fileID: 1612782913}
   maxDist: 0
-  dragForce: 5
+  dragForce: 10
   carryObj: {fileID: 1842228904}
   GrabHinge: {fileID: 855653043}
   GrabbedObj: {fileID: 0}
@@ -9756,7 +9872,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962809854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.43, y: 0, z: 3.210001}
+  m_LocalPosition: {x: 11.43, y: 0, z: 2.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10054,7 +10170,7 @@ GameObject:
   - component: {fileID: 995692881}
   - component: {fileID: 995692883}
   - component: {fileID: 995692888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (11)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -10258,7 +10374,7 @@ GameObject:
   - component: {fileID: 1006256121}
   - component: {fileID: 1006256123}
   - component: {fileID: 1006256128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (22)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -10704,7 +10820,7 @@ GameObject:
   - component: {fileID: 1064117462}
   - component: {fileID: 1064117464}
   - component: {fileID: 1064117469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (19)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -11723,7 +11839,7 @@ GameObject:
   - component: {fileID: 1138625214}
   - component: {fileID: 1138625216}
   - component: {fileID: 1138625221}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (16)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -11890,7 +12006,7 @@ GameObject:
   - component: {fileID: 1151080095}
   - component: {fileID: 1151080097}
   - component: {fileID: 1151080102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (22)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -12154,7 +12270,7 @@ GameObject:
   - component: {fileID: 1166165281}
   - component: {fileID: 1166165283}
   - component: {fileID: 1166165288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (15)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -12321,7 +12437,7 @@ GameObject:
   - component: {fileID: 1176156787}
   - component: {fileID: 1176156789}
   - component: {fileID: 1176156794}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (18)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -12956,7 +13072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222522443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.43, y: 0, z: 0.53}
+  m_LocalPosition: {x: 11.43, y: 0, z: 0.029999971}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14274,7 +14390,7 @@ GameObject:
   - component: {fileID: 1319767086}
   - component: {fileID: 1319767088}
   - component: {fileID: 1319767093}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (13)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -16043,7 +16159,7 @@ GameObject:
   - component: {fileID: 1398326018}
   - component: {fileID: 1398326020}
   - component: {fileID: 1398326025}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (1)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -17057,7 +17173,7 @@ GameObject:
   - component: {fileID: 1457045193}
   - component: {fileID: 1457045195}
   - component: {fileID: 1457045200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (14)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -17224,7 +17340,7 @@ GameObject:
   - component: {fileID: 1474035482}
   - component: {fileID: 1474035484}
   - component: {fileID: 1474035489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -17573,7 +17689,7 @@ GameObject:
   - component: {fileID: 1488547799}
   - component: {fileID: 1488547801}
   - component: {fileID: 1488547806}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (8)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -17837,7 +17953,7 @@ GameObject:
   - component: {fileID: 1497158203}
   - component: {fileID: 1497158205}
   - component: {fileID: 1497158210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (16)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -19151,7 +19267,7 @@ GameObject:
   - component: {fileID: 1604161566}
   - component: {fileID: 1604161568}
   - component: {fileID: 1604161573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (13)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -19363,6 +19479,11 @@ MonoBehaviour:
   turnSpeed: 3
   boostAm: 0
   boost: 0
+  TPivot: {fileID: 1887592673}
+  TPoint: {fileID: 527314704}
+  LookAtGrab: 0
+  tentSwap: {fileID: 462478407}
+  Tent: {fileID: 0}
 --- !u!4 &1612782916
 Transform:
   m_ObjectHideFlags: 0
@@ -19759,7 +19880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652847844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.23, y: 0, z: 0.53}
+  m_LocalPosition: {x: 6.23, y: 0, z: 0.029999971}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20188,7 +20309,7 @@ MonoBehaviour:
   Target: {fileID: 1499354981}
   mainBody: {fileID: 1612782913}
   maxDist: 0
-  dragForce: 5
+  dragForce: 10
   carryObj: {fileID: 2068309137}
   GrabHinge: {fileID: 1708537805}
   GrabbedObj: {fileID: 0}
@@ -21226,7 +21347,7 @@ GameObject:
   - component: {fileID: 1770893651}
   - component: {fileID: 1770893653}
   - component: {fileID: 1770893658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (4)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -21620,7 +21741,7 @@ GameObject:
   - component: {fileID: 1802777115}
   - component: {fileID: 1802777117}
   - component: {fileID: 1802777122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (5)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -21787,7 +21908,7 @@ GameObject:
   - component: {fileID: 1811145289}
   - component: {fileID: 1811145291}
   - component: {fileID: 1811145296}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (1)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -21954,7 +22075,7 @@ GameObject:
   - component: {fileID: 1814426290}
   - component: {fileID: 1814426292}
   - component: {fileID: 1814426297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (12)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -22613,6 +22734,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1887592673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887592674}
+  - component: {fileID: 1887592675}
+  m_Layer: 0
+  m_Name: TentaclePiot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1887592674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887592673}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 527314705}
+  m_Father: {fileID: 244934523}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1887592675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887592673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734be0cc7b2cee649bd71a2a37fe0dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1612782913}
 --- !u!1 &1896129967
 GameObject:
   m_ObjectHideFlags: 0
@@ -23063,7 +23230,7 @@ GameObject:
   - component: {fileID: 1907927745}
   - component: {fileID: 1907927747}
   - component: {fileID: 1907927752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (12)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -23230,7 +23397,7 @@ GameObject:
   - component: {fileID: 1938774119}
   - component: {fileID: 1938774121}
   - component: {fileID: 1938774126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (17)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -23579,7 +23746,7 @@ GameObject:
   - component: {fileID: 1986812302}
   - component: {fileID: 1986812304}
   - component: {fileID: 1986812309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (11)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -23997,7 +24164,7 @@ GameObject:
   - component: {fileID: 2023761790}
   - component: {fileID: 2023761792}
   - component: {fileID: 2023761797}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (4)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -24164,7 +24331,7 @@ GameObject:
   - component: {fileID: 2026439960}
   - component: {fileID: 2026439962}
   - component: {fileID: 2026439967}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm (20)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -24316,117 +24483,6 @@ MonoBehaviour:
   force: -50
   Dampner: 1
   inWater: 0
---- !u!1 &2033309394
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2033309399}
-  - component: {fileID: 2033309398}
-  - component: {fileID: 2033309397}
-  - component: {fileID: 2033309396}
-  - component: {fileID: 2033309395}
-  m_Layer: 0
-  m_Name: Current
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2033309395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033309394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d11dba9d874ecd4dbbddc91d5bf7bd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  power: 500
---- !u!65 &2033309396
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033309394}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2033309397
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033309394}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 187a5713d981594448d799871b424cf6, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2033309398
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033309394}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2033309399
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033309394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.7343, y: -0, z: -14.7055}
-  m_LocalScale: {x: 5.950824, y: 1, z: 16.59052}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 35
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2057199362
 GameObject:
   m_ObjectHideFlags: 0
@@ -24709,7 +24765,7 @@ GameObject:
   - component: {fileID: 2081223046}
   - component: {fileID: 2081223048}
   - component: {fileID: 2081223053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arm (21)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -31632,3 +31688,60 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &8633354546557165420
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.7343
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.7055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681531, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633354544798681534, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}
+      propertyPath: m_Name
+      value: Current
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7cd02daa4d74e75428ea875a6648af9a, type: 3}

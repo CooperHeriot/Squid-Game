@@ -8,6 +8,8 @@ public class CameraZoom : MonoBehaviour
 
     public GameObject SquidObj, CurrentArm;
     public GameObject Arm1, Arm2;
+
+    Vector3 DesiredLocation;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,9 @@ public class CameraZoom : MonoBehaviour
             CurrentArm = Arm2;
         }
 
-        transform.position = new Vector3((SquidObj.transform.position.x + CurrentArm.transform.position.x) / 2,
+        DesiredLocation = new Vector3((SquidObj.transform.position.x + CurrentArm.transform.position.x) / 2,
             (SquidObj.transform.position.y + CurrentArm.transform.position.y) / 2, (SquidObj.transform.position.z + CurrentArm.transform.position.z) / 2);
+
+        transform.position = Vector3.Slerp(transform.position, DesiredLocation, 1 * Time.deltaTime);
     }
 }
