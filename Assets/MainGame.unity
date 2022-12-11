@@ -1440,7 +1440,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 186285065}
   - component: {fileID: 186285064}
   - component: {fileID: 186285063}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (22)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -2683,7 +2683,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -2951,7 +2951,7 @@ GameObject:
   - component: {fileID: 214688439}
   - component: {fileID: 214688438}
   - component: {fileID: 214688437}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (6)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -3031,7 +3031,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -4176,7 +4176,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -4305,7 +4305,7 @@ GameObject:
   - component: {fileID: 286049716}
   - component: {fileID: 286049715}
   - component: {fileID: 286049714}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (7)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -4385,7 +4385,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -5102,7 +5102,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -5231,7 +5231,7 @@ GameObject:
   - component: {fileID: 312258675}
   - component: {fileID: 312258674}
   - component: {fileID: 312258673}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (4)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -5311,7 +5311,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -6687,7 +6687,7 @@ GameObject:
   - component: {fileID: 398364685}
   - component: {fileID: 398364684}
   - component: {fileID: 398364683}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (8)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -6767,7 +6767,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -7032,7 +7032,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -7146,7 +7146,7 @@ GameObject:
   - component: {fileID: 427339232}
   - component: {fileID: 427339231}
   - component: {fileID: 427339230}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (16)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -7226,7 +7226,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -7327,7 +7327,7 @@ GameObject:
   - component: {fileID: 434149217}
   - component: {fileID: 434149216}
   - component: {fileID: 434149215}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (10)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -7407,7 +7407,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -7787,7 +7787,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -8083,7 +8083,7 @@ GameObject:
   - component: {fileID: 449761694}
   - component: {fileID: 449761693}
   - component: {fileID: 449761692}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (12)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -8163,7 +8163,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -8483,7 +8483,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -9501,7 +9501,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -10182,7 +10182,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -11712,7 +11712,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -12774,7 +12774,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -13196,7 +13196,7 @@ GameObject:
   - component: {fileID: 730432870}
   - component: {fileID: 730432869}
   - component: {fileID: 730432868}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (20)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -13276,7 +13276,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -13712,7 +13712,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -15463,7 +15463,7 @@ GameObject:
   - component: {fileID: 919043773}
   - component: {fileID: 919043772}
   - component: {fileID: 919043771}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (2)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -15543,7 +15543,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -16164,7 +16164,7 @@ GameObject:
   - component: {fileID: 964107996}
   - component: {fileID: 964107995}
   - component: {fileID: 964107994}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (18)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -16244,7 +16244,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -16442,7 +16442,7 @@ GameObject:
   - component: {fileID: 978439075}
   - component: {fileID: 978439074}
   - component: {fileID: 978439073}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -16522,7 +16522,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -16871,7 +16871,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -17089,7 +17089,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -17285,7 +17285,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -19758,7 +19758,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -20311,7 +20311,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -20492,7 +20492,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -20621,7 +20621,7 @@ GameObject:
   - component: {fileID: 1183093471}
   - component: {fileID: 1183093470}
   - component: {fileID: 1183093469}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (13)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -20701,7 +20701,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -23216,7 +23216,7 @@ GameObject:
   - component: {fileID: 1303971219}
   - component: {fileID: 1303971218}
   - component: {fileID: 1303971217}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (1)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -23296,7 +23296,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -24501,7 +24501,7 @@ GameObject:
   - component: {fileID: 1320388388}
   - component: {fileID: 1320388387}
   - component: {fileID: 1320388386}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (26)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -24581,7 +24581,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -25872,7 +25872,7 @@ GameObject:
   - component: {fileID: 1381141262}
   - component: {fileID: 1381141261}
   - component: {fileID: 1381141260}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (24)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -25952,7 +25952,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -26809,7 +26809,7 @@ GameObject:
   - component: {fileID: 1418002262}
   - component: {fileID: 1418002261}
   - component: {fileID: 1418002260}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (14)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -26889,7 +26889,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -26990,7 +26990,7 @@ GameObject:
   - component: {fileID: 1426369272}
   - component: {fileID: 1426369271}
   - component: {fileID: 1426369270}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (15)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -27070,7 +27070,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -28344,7 +28344,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -29212,7 +29212,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -29808,7 +29808,7 @@ GameObject:
   - component: {fileID: 1497524878}
   - component: {fileID: 1497524877}
   - component: {fileID: 1497524876}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (23)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -29888,7 +29888,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -31159,7 +31159,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -31273,7 +31273,7 @@ GameObject:
   - component: {fileID: 1587195950}
   - component: {fileID: 1587195949}
   - component: {fileID: 1587195948}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (27)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -31352,7 +31352,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -31651,7 +31651,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -32116,7 +32116,7 @@ GameObject:
   - component: {fileID: 1633008807}
   - component: {fileID: 1633008806}
   - component: {fileID: 1633008805}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (19)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -32196,7 +32196,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -33486,7 +33486,7 @@ GameObject:
   - component: {fileID: 1707792077}
   - component: {fileID: 1707792076}
   - component: {fileID: 1707792075}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (3)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -33566,7 +33566,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -35710,7 +35710,7 @@ GameObject:
   - component: {fileID: 1793956673}
   - component: {fileID: 1793956672}
   - component: {fileID: 1793956671}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (11)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -35790,7 +35790,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -36170,7 +36170,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -36351,7 +36351,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -36532,7 +36532,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -37085,7 +37085,7 @@ GameObject:
   - component: {fileID: 1841645839}
   - component: {fileID: 1841645838}
   - component: {fileID: 1841645837}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (21)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -37165,7 +37165,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -38371,7 +38371,7 @@ GameObject:
   - component: {fileID: 1908496522}
   - component: {fileID: 1908496521}
   - component: {fileID: 1908496520}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (5)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -38451,7 +38451,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -38840,7 +38840,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -39151,7 +39151,7 @@ GameObject:
   - component: {fileID: 1985088868}
   - component: {fileID: 1985088867}
   - component: {fileID: 1985088866}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (25)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -39231,7 +39231,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -40087,7 +40087,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -40268,7 +40268,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -40690,7 +40690,7 @@ GameObject:
   - component: {fileID: 2064702708}
   - component: {fileID: 2064702707}
   - component: {fileID: 2064702706}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (9)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -40770,7 +40770,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -41435,7 +41435,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -41822,7 +41822,7 @@ GameObject:
   - component: {fileID: 2117965296}
   - component: {fileID: 2117965295}
   - component: {fileID: 2117965294}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arm (17)
   m_TagString: Squid
   m_Icon: {fileID: 0}
@@ -41902,7 +41902,7 @@ HingeJoint:
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
-    contactDistance: 0
+    contactDistance: 10
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
