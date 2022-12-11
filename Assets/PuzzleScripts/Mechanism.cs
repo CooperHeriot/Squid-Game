@@ -10,6 +10,9 @@ public class Mechanism : MonoBehaviour
 
     public float dist;
 
+    public Rigidbody rb;
+    public bool lok;
+
     //public bool Lever;
    // public float Max, Min;
     //public GameObject handle;
@@ -27,6 +30,11 @@ public class Mechanism : MonoBehaviour
         if (dist < radius)
         {
             dor.activated = true;
+            if (lok == true)
+                {
+                rb.isKinematic = true;
+
+                }
         } else
         {
             dor.activated = false;

@@ -27,6 +27,7 @@ public class TentacleGrabber : MonoBehaviour
     public bool grabbing;
     public bool grabbed;
     public bool immovable;
+    public bool seen;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +58,10 @@ public class TentacleGrabber : MonoBehaviour
 
             Vector3 ForceDirection = transform.position - Target.transform.position;
 
-            rb.AddForce(ForceDirection * -speed, ForceMode.Acceleration);
+            if (GetComponent<Renderer>().isVisible)
+            {
+                rb.AddForce(ForceDirection * -speed, ForceMode.Acceleration);
+            }         
 
             if (Vector3.Distance(transform.position, mainBody.transform.position) > maxDist)
             {
@@ -106,5 +110,14 @@ public class TentacleGrabber : MonoBehaviour
                 immovable = true;
             }
         }
+    }
+
+    private void OnBecameVisible()
+    {
+        seen = true;
+    }
+    private void OnBecameInvisible()
+    {
+        seen = false;
     }
 }
