@@ -10,7 +10,7 @@ public class PauseManager : MonoBehaviour
 
     public GameObject panel, anet;
 
-    public string menu;
+    public string menu, otherScene;
     //public Animator
     // Start is called before the first frame update
     private void Update()
@@ -64,5 +64,10 @@ public class PauseManager : MonoBehaviour
         anet.SetActive(true);
         //panel.SetActive(false);
         Destroy(panel.gameObject);
+    }
+
+    public void loadScene()
+    {
+        SceneManager.LoadScene(otherScene);
     }
 }
